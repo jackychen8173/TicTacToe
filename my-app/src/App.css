@@ -1,30 +1,60 @@
-body {
+/* App.css */
+
+/* Overall game container */
+.game {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  font-family: 'Arial' sans-serif;
-  background-color: #f4f4f4;
+  align-items: flex-start;
+  margin-top: 50px;
 }
 
+/* Board and squares */
+.game-board {
+  margin-right: 20px;
+}
+
+.square {
+  background: #fff;
+  border: 2px solid #333;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.square:hover {
+  background: #ddd;
+}
+
+/* Board rows */
 .board-row {
   display: flex;
 }
 
-.square {
-  width: 100px;
-  height: 100px;
-  background-color: #fff;
-  border: 1px solid #493e3e;
+/* Game status */
+.status {
+  margin-bottom: 20px;
   font-size: 24px;
   font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.square:hover {
-  background-color: #ddd;
+/* Game info (for move history) */
+.game-info {
+  margin-left: 20px;
+}
+
+.game-info ol {
+  padding-left: 30px;
+}
+
+.game-info button {
+  font-size: 16px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
